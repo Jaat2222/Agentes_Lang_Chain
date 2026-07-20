@@ -19,19 +19,19 @@ El núcleo del sistema no es un simple script lineal de prompts; implementa un b
 
 ```mermaid
 graph TD
-    A[📁 Archivo CSV Cargado] --> B[⚙️ Inicialización de Herramientas]
-    B --> C[🔎 Pregunta en Texto Libre]
-    C --> D[🧠 Orquestador: AgentExecutor]
+    A["📁 Archivo CSV Cargado"] --> B["⚙️ Inicialización de Herramientas"]
+    B --> C["🔎 Pregunta en Texto Libre"]
+    C --> D["🧠 Orquestador: AgentExecutor"]
     
-    D --> E[📊 Herramienta Generar Gráfico]
-    D --> F[📄 Herramienta Informaciones DF]
-    D --> G[🐍 Herramienta Códigos de Python]
+    D --> E["📊 Herramienta Generar Gráfico"]
+    D --> F["📄 Herramienta Informaciones DF"]
+    D --> G["🐍 Herramienta Códigos de Python"]
     
-    E --> H[💻 Código Matplotlib/Seaborn]
-    F --> I[📋 Plantillas Estructuradas]
-    G --> J[🔢 PythonAstREPLTool]
+    E --> H["💻 Código Matplotlib/Seaborn"]
+    F --> I["📋 Plantillas Estructuradas"]
+    G --> J["🔢 PythonAstREPLTool"]
     
-    H --> K[✔️ Respuesta Final en Streamlit]
+    H --> K["✔️ Respuesta Final en Streamlit"]
     I --> K
     J --> K
 
