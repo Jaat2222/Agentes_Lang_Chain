@@ -14,29 +14,8 @@ Repositorio en GitHub: [https://github.com/Jaat2222/Agentes_Lang_Chain](https://
 🛠️ Arquitectura y Flujo de la Solución
 El núcleo del sistema no es un simple script lineal de prompts; implementa un bucle de razonamiento ReAct gestionado por un orquestador que decide dinámicamente qué herramienta especializada ejecutar según la intención del usuario.
 
-🔄 Diagrama del Proceso de Ejecución
+<img width="1372" height="217" alt="image" src="https://github.com/user-attachments/assets/3fbafadf-9694-46ec-baef-1d9f0af48850" />
 
-[ Archivo CSV Cargado ] ──► [ Inicialización de Herramientas Especializadas ]
-                                              │
-                                              ▼
-                                 [ Pregunta en Texto Libre ]
-                                              │
-                                              ▼
-                            🧠 [ Orquestador: AgentExecutor ]
-                                              │
-                      ┌──────────────────────┼──────────────────────┐
-                      ▼                      ▼                      ▼
-           📊 [ Generar Gráfico ]   📄 [ Informaciones DF ]  🐍 [ PythonAstREPLTool ]
-                      │                      │                      │
-                      ▼                      ▼                      ▼
-           Generación e inyección   Resúmenes mediante     Cálculos puntuales y
-             dinámica de código     plantillas de prompts     transformaciones de
-            Matplotlib/Seaborn        estructuradas         código en tiempo real
-                      │                      │                      │
-                      └──────────────────────┼──────────────────────┘
-                                              │
-                                              ▼
-                             ✔️ [ Respuesta Final en Streamlit ]
 
 🧠 Detalle de los Componentes Clave:
 Orquestador (AgentExecutor): Implementa una plantilla ReAct en castellano que procesa el estado del DataFrame (df.head()) estructurado en formato Markdown. Mantiene un flujo de pensamiento lógico estructurado en Thought ──► Action ──► Action Input ──► Observation hasta resolver la consulta.
