@@ -14,7 +14,36 @@ Repositorio en GitHub: [https://github.com/Jaat2222/Agentes_Lang_Chain](https://
 🛠️ Arquitectura y Flujo de la Solución
 El núcleo del sistema no es un simple script lineal de prompts; implementa un bucle de razonamiento ReAct gestionado por un orquestador que decide dinámicamente qué herramienta especializada ejecutar según la intención del usuario.
 
-<img width="1372" height="217" alt="image" src="https://github.com/user-attachments/assets/3fbafadf-9694-46ec-baef-1d9f0af48850" />
+### 🔄 Diagrama del Proceso de Ejecución
+
+```mermaid
+graph TD
+    A[📁 Archivo CSV Cargado] --> B[⚙️ Inicialización de Herramientas]
+    B --> C[🔎 Pregunta en Texto Libre]
+    C --> D[🧠 Orquestador: AgentExecutor]
+    
+    D --> E[📊 Herramienta Generar Gráfico]
+    D --> F[📄 Herramienta Informaciones DF]
+    D --> G[🐍 Herramienta Códigos de Python]
+    
+    E --> H[💻 Código Matplotlib/Seaborn]
+    F --> I[📋 Plantillas Estructuradas]
+    G --> J[🔢 PythonAstREPLTool]
+    
+    H --> K[✔️ Respuesta Final en Streamlit]
+    I --> K
+    J --> K
+
+    style D fill:#1f6feb,stroke:#58a6ff,stroke-width:2px,color:#fff
+    style K fill:#238636,stroke:#2ea043,stroke-width:2px,color:#fff
+```
+
+### 🧠 Detalle de los Componentes Clave:
+
+* **🧠 Orquestador (AgentExecutor):** Implementa una plantilla ReAct en castellano que procesa el estado del DataFrame (`df.head()`) estructurado en formato Markdown[cite: 5]. Mantiene un flujo de pensamiento lógico estructurado en `Thought ──► Action ──► Action Input ──► Observation` hasta resolver la consulta de manera definitiva[cite: 5].
+* **📄 Herramienta Informaciones DF:** Extrae las dimensiones exactas (`shape`), tipos de datos de las columnas, conteo estricto de valores nulos y cadenas de texto que simulan valores nulos (`'nan'`)[cite: 3]. Un prompt estructurado obliga al LLM a devolver un informe técnico formal categorizado con sugerencias de limpieza[cite: 3].
+* **📊 Herramienta Generar Gráfico:** Un motor avanzado de inyección de código[cite: 3]. Toma la petición del usuario, evalúa la estructura de los datos y redacta exclusivamente código Python puro bajo lineamientos estrictos (uso del 100% de los datos, configuraciones de diseño con `sns.despine()` y control cronológico)[cite: 3]. El backend captura el gráfico y lo renderiza de forma nativa en la interfaz web a través de `st.pyplot()`[cite: 3].
+* **🐍 Herramienta Códigos de Python (PythonAstREPLTool):** Un entorno seguro aislado que ejecuta comandos AST de Python directamente sobre el DataFrame local para contestar de forma exacta métricas complejas o filtros combinados (ej. *¿Cuál es el promedio de X columna?*)[cite: 3].
 
 
 🧠 Detalle de los Componentes Clave:
