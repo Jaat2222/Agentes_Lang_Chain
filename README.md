@@ -87,16 +87,22 @@ GROQ_API_KEY=tu_groq_api_key_real_aqui
 ```cmd
 streamlit run app.py
 ```
-☁️ Guía de Despliegue en Streamlit Cloud
+## ☁️ Guía de Despliegue en Streamlit Cloud
+
 Para mantener la aplicación sincronizada y funcionando de manera pública en los servidores de Streamlit Community Cloud:
 
-    Asegúrate de confirmar y enviar tus últimas actualizaciones locales a tu repositorio de GitHub mediante la consola de Git (git add .gitignore, git commit, git push origin main).
+* **Paso 1: Confirmar cambios locales**
+    Asegúrate de confirmar y enviar tus últimas actualizaciones locales a tu repositorio de GitHub mediante la consola de Git (`git add .gitignore`, `git commit`, `git push origin main`).
 
+* **Paso 2: Acceder a la plataforma**
     Accede a share.streamlit.io mediante tu cuenta vinculada de GitHub.
 
-    Configura los parámetros iniciales apuntando al repositorio Agentes_Lang_Chain, rama main y archivo de ejecución app.py.
+* **Paso 3: Configurar parámetros**
+    Configura los parámetros iniciales apuntando al repositorio `Agentes_Lang_Chain`, rama `main` y archivo de ejecución `app.py`.
 
-    Ingresa a la sección Advanced Settings e introduce tu variable de entorno en el apartado de secretos:  
+* **Paso 4: Cargar credenciales seguras**
+    Ingresa a la sección Advanced Settings e introduce tu variable de entorno en el apartado de secretos:
     GROQ_API_KEY = "tu_api_key_de_groq_aqui"
 
-Presiona Deploy. Gracias a la integración con Git y al archivo .gitignore configurado, los cambios futuros en herramientas.py o app.py se desplegarán de forma automatizada en producción.
+* **Paso 5: Desplegar**
+    Presiona Deploy. Gracias a la integración con Git y al archivo `.gitignore` configurado, los cambios futuros en `herramientas.py` o `app.py` se desplegarán de forma automatizada en producción.
