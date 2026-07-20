@@ -45,17 +45,13 @@ graph TD
 * **📊 Herramienta Generar Gráfico:** Un motor avanzado de inyección de código. Toma la petición del usuario, evalúa la estructura de los datos y redacta exclusivamente código Python puro bajo lineamientos estrictos (uso del 100% de los datos, configuraciones de diseño con `sns.despine()` y control cronológico). El backend captura el gráfico y lo renderiza de forma nativa en la interfaz web a través de `st.pyplot()`.
 * **🐍 Herramienta Códigos de Python (PythonAstREPLTool):** Un entorno seguro aislado que ejecuta comandos AST de Python directamente sobre el DataFrame local para contestar de forma exacta métricas complejas o filtros combinados (ej. *¿Cuál es el promedio de X columna?*).
 
-🧰 Tecnologías y Herramientas Utilizadas
-    Framework de IA: LangChain (LCEL) & LangChain Experimental Core.
+## 🧰 Tecnologías y Herramientas Utilizadas
 
-    Modelo de Lenguaje (LLM): ChatGroq (llama-3.3-70b-versatile) con temperature=0 para asegurar respuestas deterministas y exactas.
-
-    Librerías de Análisis y Visualización: Pandas, Matplotlib, Seaborn y Tabulate.
-
-    Interfaz de Usuario: Streamlit (Layout centrado con estados de sesión y descargas nativas de reportes en Markdown).
-
-    Entorno de Configuración: Python 3.10+ y Python-Dotenv.
-
+1. **Framework de IA:** LangChain (LCEL) & LangChain Experimental Core.
+2. **Modelo de Lenguaje (LLM):** ChatGroq (`llama-3.3-70b-versatile`) con `temperature=0` para asegurar respuestas deterministas y exactas.
+3. **Librerías de Análisis y Visualización:** Pandas, Matplotlib, Seaborn y Tabulate.
+4. **Interfaz de Usuario:** Streamlit (Layout centrado con estados de sesión y descargas nativas de reportes en Markdown).
+5. **Entorno de Configuración:** Python 3.10+ y Python-Dotenv.
 🚀 Instrucciones para Ejecución Local y Configuración
 Prerrequisitos
 Contar con Python 3.10 o superior instalado y disponer de una API Key activa dentro de la plataforma de Groq Cloud.
