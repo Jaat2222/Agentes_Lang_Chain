@@ -60,25 +60,33 @@ Entorno de Configuración: Python 3.10+ y Python-Dotenv.
 Prerrequisitos
 Contar con Python 3.10 o superior instalado y disponer de una API Key activa dentro de la plataforma de Groq Cloud.
 
-1. Clonar el repositorio
-git clone https://github.com/Jaat2222/Agentes_Lang_Chain.git
+### 1. Clonar el repositorio
+```cmd
+git clone [https://github.com/Jaat2222/Agentes_Lang_Chain.git](https://github.com/Jaat2222/Agentes_Lang_Chain.git)
 cd Agentes_Lang_Chain
+```
 
-2. Crear y activar el entorno virtual
+### 2. Crear y activar el entorno virtual
 En Windows (CMD):
+```cmd
 python -m venv .venv
 .venv\Scripts\activate
+```
 
-3. Instalar dependencias del proyecto
+### 3. Instalar dependencias del proyecto
+```cmd
 pip install -r requirements.txt
-
-4. Configurar variables de entorno
-Crea un archivo llamado .env en la raíz del proyecto y añade tu credencial de Groq:
+```
+### 4. Configurar variables de entorno
+Crea un archivo llamado `.env` en la raíz del proyecto y añade tu credencial de Groq:
+```env
 GROQ_API_KEY=tu_groq_api_key_real_aqui
+```
 
-5. Ejecutar la aplicación local
+### 5. Ejecutar la aplicación local
+```cmd
 streamlit run app.py
-
+```
 ☁️ Guía de Despliegue en Streamlit Cloud
 Para mantener la aplicación sincronizada y funcionando de manera pública en los servidores de Streamlit Community Cloud:
 
