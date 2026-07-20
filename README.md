@@ -46,15 +46,15 @@ graph TD
 * **🐍 Herramienta Códigos de Python (PythonAstREPLTool):** Un entorno seguro aislado que ejecuta comandos AST de Python directamente sobre el DataFrame local para contestar de forma exacta métricas complejas o filtros combinados (ej. *¿Cuál es el promedio de X columna?*).
 
 🧰 Tecnologías y Herramientas Utilizadas
-Framework de IA: LangChain (LCEL) & LangChain Experimental Core.
+    Framework de IA: LangChain (LCEL) & LangChain Experimental Core.
 
-Modelo de Lenguaje (LLM): ChatGroq (llama-3.3-70b-versatile) con temperature=0 para asegurar respuestas deterministas y exactas.
+    Modelo de Lenguaje (LLM): ChatGroq (llama-3.3-70b-versatile) con temperature=0 para asegurar respuestas deterministas y exactas.
 
-Librerías de Análisis y Visualización: Pandas, Matplotlib, Seaborn y Tabulate.
+    Librerías de Análisis y Visualización: Pandas, Matplotlib, Seaborn y Tabulate.
 
-Interfaz de Usuario: Streamlit (Layout centrado con estados de sesión y descargas nativas de reportes en Markdown).
+    Interfaz de Usuario: Streamlit (Layout centrado con estados de sesión y descargas nativas de reportes en Markdown).
 
-Entorno de Configuración: Python 3.10+ y Python-Dotenv.
+    Entorno de Configuración: Python 3.10+ y Python-Dotenv.
 
 🚀 Instrucciones para Ejecución Local y Configuración
 Prerrequisitos
@@ -90,13 +90,13 @@ streamlit run app.py
 ☁️ Guía de Despliegue en Streamlit Cloud
 Para mantener la aplicación sincronizada y funcionando de manera pública en los servidores de Streamlit Community Cloud:
 
-Asegúrate de confirmar y enviar tus últimas actualizaciones locales a tu repositorio de GitHub mediante la consola de Git (git add .gitignore, git commit, git push origin main).
+    Asegúrate de confirmar y enviar tus últimas actualizaciones locales a tu repositorio de GitHub mediante la consola de Git (git add .gitignore, git commit, git push origin main).
 
-Accede a share.streamlit.io mediante tu cuenta vinculada de GitHub.
+    Accede a share.streamlit.io mediante tu cuenta vinculada de GitHub.
 
-Configura los parámetros iniciales apuntando al repositorio Agentes_Lang_Chain, rama main y archivo de ejecución app.py.
+    Configura los parámetros iniciales apuntando al repositorio Agentes_Lang_Chain, rama main y archivo de ejecución app.py.
 
-Ingresa a la sección Advanced Settings e introduce tu variable de entorno en el apartado de secretos:  
-GROQ_API_KEY = "tu_api_key_de_groq_aqui"
+    Ingresa a la sección Advanced Settings e introduce tu variable de entorno en el apartado de secretos:  
+    GROQ_API_KEY = "tu_api_key_de_groq_aqui"
 
 Presiona Deploy. Gracias a la integración con Git y al archivo .gitignore configurado, los cambios futuros en herramientas.py o app.py se desplegarán de forma automatizada en producción.
