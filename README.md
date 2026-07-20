@@ -1,6 +1,6 @@
-Asistente Inteligente de Análisis y Visualización de Datos
+#Asistente Inteligente de Análisis y Visualización de Datos
   
-  🦜 Agente ReAct Inteligente para Exploración y Análisis Automatizado de Datasets
+##Agente ReAct Inteligente para Exploración y Análisis Automatizado de Datasets
 
 Este proyecto consiste en un Agente de Inteligencia Artificial basado en el framework LangChain y el razonamiento tipo ReAct (Reasoning and Acting). El sistema está diseñado para actuar como un analista de datos virtual avanzado, permitiendo a los usuarios cargar cualquier archivo en formato CSV y realizar exploraciones profundas, resúmenes estadísticos exhaustivos, consultas personalizadas mediante código dinámico y generación de gráficos a partir de instrucciones en lenguaje natural.
 
