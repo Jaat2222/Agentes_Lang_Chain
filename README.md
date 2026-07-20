@@ -6,10 +6,11 @@ Este proyecto consiste en un Agente de Inteligencia Artificial basado en el fram
 
 Desarrollado con una arquitectura modular de herramientas (Tools), la aplicación integra un LLM de alto rendimiento a través de Groq para procesar metadatos e interpretar tendencias, aislando los datos locales para garantizar un análisis seguro, eficiente y de nivel profesional.
 
-☁️ Enlaces y Evidencia del Proyecto
-Aplicación en Producción (Streamlit Cloud): https://agenteslangchain.streamlit.app
+## ☁️ Enlaces y Evidencia del Proyecto
 
-Repositorio en GitHub: [https://github.com/Jaat2222/Agentes_Lang_Chain](https://github.com/Jaat2222/Agentes_Lang_Chain)
+* **Repositorio en GitHub:** https://github.com/Jaat2222/Agentes_Lang_Chain
+* **Aplicación en Producción (Streamlit Cloud):** https://agenteslangchain.streamlit.app
+
 
 🛠️ Arquitectura y Flujo de la Solución
 El núcleo del sistema no es un simple script lineal de prompts; implementa un bucle de razonamiento ReAct gestionado por un orquestador que decide dinámicamente qué herramienta especializada ejecutar según la intención del usuario.
