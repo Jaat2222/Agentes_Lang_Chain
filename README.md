@@ -53,8 +53,10 @@ graph TD
 3. **Librerías de Análisis y Visualización:** Pandas, Matplotlib, Seaborn y Tabulate.
 4. **Interfaz de Usuario:** Streamlit (Layout centrado con estados de sesión y descargas nativas de reportes en Markdown).
 5. **Entorno de Configuración:** Python 3.10+ y Python-Dotenv.
-🚀 Instrucciones para Ejecución Local y Configuración
-Prerrequisitos
+
+## 🚀 Instrucciones para Ejecución Local y Configuración
+
+### 📋 Prerrequisitos
 Contar con Python 3.10 o superior instalado y disponer de una API Key activa dentro de la plataforma de Groq Cloud.
 
 ### 1. Clonar el repositorio
